@@ -8,8 +8,8 @@ object Max {
   def maxAccum(ints: List[Int], theMax: Int): Int = {
     if(ints.isEmpty) return theMax
     else if (ints.head > theMax) {
-      if (ints.length == 1) return ints(0)
-      maxAccum(ints.slice(1, ints.size), ints(0))
+      if (ints.length == 1) return ints.head
+      maxAccum(ints.slice(1, ints.size), ints.head)
     }
     else {
       if (ints.length == 1) return theMax
