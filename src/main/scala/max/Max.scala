@@ -17,7 +17,7 @@ object Max {
       else maxAccum(ints.tail, ints.head)
     }
     else {
-      if (ints.length == 1) return theMax
+      if (ints.length == 1) theMax
       else maxAccum(ints.tail, theMax)
     }
   }
