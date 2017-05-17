@@ -10,8 +10,8 @@ object Sort {
   def isSorted(as: Array[Int], ordered: (Int, Int) => Boolean): Boolean = {
     if (as.length <= 1) true
     else if (ordered(as(0), as(1))) {
-      if (as.length == 2) return true
-      isSorted(as.tail, ordered)
+      if (as.length == 2) true
+      else isSorted(as.tail, ordered)
     }
     else false
   }

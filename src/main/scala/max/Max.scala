@@ -11,14 +11,14 @@ object Max {
   }
 
   def maxAccum(ints: List[Int], theMax: Int): Int = {
-    if (ints.isEmpty) return theMax
+    if (ints.isEmpty) theMax
     else if (ints.head > theMax) {
-      if (ints.length == 1) return ints.head
-      maxAccum(ints.tail, ints.head)
+      if (ints.length == 1) ints.head
+      else maxAccum(ints.tail, ints.head)
     }
     else {
       if (ints.length == 1) return theMax
-      maxAccum(ints.tail, theMax)
+      else maxAccum(ints.tail, theMax)
     }
   }
 
