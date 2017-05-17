@@ -5,15 +5,20 @@ package max
   */
 object Max {
 
+
+  def max(ints: List[Int]): Int = {
+    maxAccum(ints, 0)
+  }
+
   def maxAccum(ints: List[Int], theMax: Int): Int = {
-    if(ints.isEmpty) return theMax
+    if (ints.isEmpty) return theMax
     else if (ints.head > theMax) {
       if (ints.length == 1) return ints.head
-      maxAccum(ints.slice(1, ints.size), ints.head)
+      maxAccum(ints.tail, ints.head)
     }
     else {
       if (ints.length == 1) return theMax
-      maxAccum(ints.slice(1, ints.size), theMax)
+      maxAccum(ints.tail, theMax)
     }
   }
 
