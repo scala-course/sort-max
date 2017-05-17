@@ -8,7 +8,7 @@ object Sort {
   def defaultSortFunction = (x: Int, y: Int) => x < y
 
   def isSorted(as: Array[Int], ordered: (Int, Int) => Boolean): Boolean = {
-    if(as.length<=1){
+    if (as.length <= 1) {
       false
     }
     else if (ordered(as(0), as(1))) {
